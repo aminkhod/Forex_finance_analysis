@@ -7,8 +7,8 @@ from sklearn.metrics import classification_report,confusion_matrix
 
 ###reading data
 missing_value=['?']
-data2= pd.read_csv("breast-cancer.csv", na_values=missing_value)
-
+data2= pd.read_csv("EC-H1-train.csv", na_values=missing_value)
+data1= pd.read_csv("EC-H1-test.csv", na_values=missing_value)
 ##replacing
 bmedian = data2['Bare Nuclei'].median()
 data2['Bare Nuclei'].fillna(bmedian,inplace=True)
@@ -20,8 +20,8 @@ y=np.array([1 if yinstance==4 else 0 for yinstance in y ])
 
 
 ###### Devide data to test and train
-from sklearn.model_selection import train_test_split
-X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=0)
+# from sklearn.model_selection import train_test_split
+# X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=0)
 
 
 ############## Regression with MLP#############
