@@ -115,17 +115,17 @@ print("Precision:",metrics.precision_score(y_test , y_pred))
 print("Recall:",metrics.recall_score(y_test, y_pred))
 
 
-from sklearn.model_selection import LeaveOneOut
-X = X_train
-y = y_train
-loo = LeaveOneOut()
-loo.get_n_splits(X)
-
-
-for train_index, test_index in loo.split(X):
-   # print("TRAIN:", train_index, "TEST:", test_index)
-   X_train, X_test = X[train_index], X[test_index]
-   y_train, y_test = y[train_index], y[test_index]
-   # print(X_train, X_test, y_train, y_test)
+# from sklearn.model_selection import LeaveOneOut
+# X = X_train
+# y = y_train
+# loo = LeaveOneOut()
+# loo.get_n_splits(X)
+#
+#
+# for train_index, test_index in loo.split(X):
+#    # print("TRAIN:", train_index, "TEST:", test_index)
+#    X_train, X_test = X[train_index], X[test_index]
+#    y_train, y_test = y[train_index], y[test_index]
+#    # print(X_train, X_test, y_train, y_test)
 
 1+1
