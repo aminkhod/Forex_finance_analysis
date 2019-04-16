@@ -4,12 +4,22 @@ import pandas as pd
 from sklearn.datasets import load_iris
 from sklearn.linear_model import LogisticRegression
 
-X, y = load_iris(return_X_y=True)
+# X, y = load_iris(return_X_y=True)
+#
+# ###### Devide data to test and train
+# from sklearn.model_selection import train_test_split
+# X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.25,random_state=0)
 
-###### Devide data to test and train
-from sklearn.model_selection import train_test_split
-X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.25,random_state=0)
+data2= pd.read_csv("EC-H1-train.csv")
+data1= pd.read_csv("EC-H1-test.csv")
+##replacing
+# bmedian = data2['Bare Nuclei'].median()
+# data2['Bare Nuclei'].fillna(bmedian,inplace=True)
 
+X_train=data2.values[:,1:]
+y_train=data2.values[:,0]
+X_test=data1.values[:,1:]
+y_test=data1.values[:,0]
 logreg = LogisticRegression(random_state=0, solver='lbfgs', multi_class='multinomial')
 logregmodel = logreg.fit(X_train, y_train)
 

@@ -28,17 +28,17 @@ y_test=data1.values[:,0]
 
 ############## Regression with MLP#############
 #######sklearn.neural_network.MLPRegressor
-from sklearn.neural_network import MLPRegressor
-
-MLPRegressor(hidden_layer_sizes=(100, ),activation='relu',solver='adam',
-				alpha=0.0001, batch_size='auto',
-              learning_rate='constant',learning_rate_init=0.001,
-                power_t=0.5, max_iter=200, shuffle=True,
-              random_state=None, tol=0.0001, verbose=False,
-				warm_start=False,momentum=0.9,
-              nesterovs_momentum=True, early_stopping=False,
-				validation_fraction=0.1, beta_1=0.9, beta_2=0.999,
-              epsilon=1e-08,	n_iter_no_change=10)
+# from sklearn.neural_network import MLPRegressor
+#
+# MLPRegressor(hidden_layer_sizes=(100, ),activation='relu',solver='adam',
+# 				alpha=0.0001, batch_size='auto',
+#               learning_rate='constant',learning_rate_init=0.001,
+#                 power_t=0.5, max_iter=200, shuffle=True,
+#               random_state=None, tol=0.0001, verbose=False,
+# 				warm_start=False,momentum=0.9,
+#               nesterovs_momentum=True, early_stopping=False,
+# 				validation_fraction=0.1, beta_1=0.9, beta_2=0.999,
+#               epsilon=1e-08,	n_iter_no_change=10)
 
 
 '''
@@ -78,7 +78,7 @@ from sklearn.neural_network import MLPClassifier
 #               validation_fraction=0.1, verbose=False, warm_start=False)
 
 clf = MLPClassifier(solver='lbfgs', alpha=1e-5,
-                     hidden_layer_sizes=(5, 2), random_state=0)
+                     hidden_layer_sizes=(100, 200), random_state=0)
 clf.fit(X_train, y_train)
 
 predict =clf.predict(X_test)
@@ -89,12 +89,12 @@ print(classification_report(y_test,predict))
 print(confusion_matrix(y_test,predict))
 
 from sklearn import metrics
-fpr, tpr, thresholds = metrics.roc_curve(y,predict, pos_label=2)
+fpr, tpr, thresholds = metrics.roc_curve(y_test,predict, pos_label=2)
 mlpauc= metrics.auc(fpr, tpr)
 
-fpr, tpr, thresholds = metrics.precision_recall_curve(y,predict, pos_label=2)
+fpr, tpr, thresholds = metrics.precision_recall_curve(y_test,predict, pos_label=2)
 mlpaupr= metrics.auc(fpr, tpr)
-
+print(mlpaupr)
 
 #Currently, MLPClassifier supports only the Cross-Entropy loss function
 #MLPClassifier supports multi-class classification by applying Softmax as the output function
