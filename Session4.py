@@ -1,7 +1,6 @@
 ############## Classification#############
 ###########Logistic Regression
 import pandas as pd
-from sklearn.datasets import load_iris
 from sklearn.linear_model import LogisticRegression
 
 # X, y = load_iris(return_X_y=True)
@@ -20,7 +19,7 @@ X_train=data2.values[:,1:]
 y_train=data2.values[:,0]
 X_test=data1.values[:,1:]
 y_test=data1.values[:,0]
-logreg = LogisticRegression(random_state=0, solver='lbfgs', multi_class='multinomial')
+logreg = LogisticRegression( solver='lbfgs')
 logregmodel = logreg.fit(X_train, y_train)
 
 y_pred = logregmodel.predict(X_test)
