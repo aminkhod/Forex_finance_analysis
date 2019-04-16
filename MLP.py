@@ -10,12 +10,14 @@ missing_value=['?']
 data2= pd.read_csv("EC-H1-train.csv", na_values=missing_value)
 data1= pd.read_csv("EC-H1-test.csv", na_values=missing_value)
 ##replacing
-bmedian = data2['Bare Nuclei'].median()
-data2['Bare Nuclei'].fillna(bmedian,inplace=True)
+# bmedian = data2['Bare Nuclei'].median()
+# data2['Bare Nuclei'].fillna(bmedian,inplace=True)
 
-X=data2.values[:,1:10]
-y=data2.values[:,10]
-y=np.array([1 if yinstance==4 else 0 for yinstance in y ])
+X_train=data2.values[:,1:]
+y_train=data2.values[:,0]
+X_test=data1.values[:,1:]
+y_test=data1.values[:,0]
+# y=np.array([1 if yinstance==4 else 0 for yinstance in y ])
 
 
 
