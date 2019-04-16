@@ -6,25 +6,16 @@ import numpy as np
 
 ###reading data
 # missValue=['?']
-Autism=pd.read_csv('Autism-Adult.csv')
-# print(Autism.isnull().sum())
-# print(Autism['age numeric'][62])
-nanind=[]
-for ind in range( len(Autism['age numeric'])):
-		if (Autism['age numeric'][ind]=='?'):
-			nanind.append(ind)
+data2= pd.read_csv("EC-H1-train.csv")
+data1= pd.read_csv("EC-H1-test.csv")
+##replacing
+# bmedian = data2['Bare Nuclei'].median()
+# data2['Bare Nuclei'].fillna(bmedian,inplace=True)
 
-Autism=Autism.drop(nanind)
-X=Autism.values[:,:12]
-y=Autism.values[:,12]
-y_edit= np.array([1 if yinstance=='yes' else 0 for yinstance in y ])
-X[:,11]=np.array([1 if xinstance=='f' else 0 for xinstance in X[:,11] ])
-
-
-
-###### Devide data to test and train
-from sklearn.model_selection import train_test_split
-X_train,X_test,y_train,y_test=train_test_split(X,y_edit,test_size=0.2,random_state=0)
+X_train=data2.values[:,1:]
+y_train=data2.values[:,0]
+X_test=data1.values[:,1:]
+y_test=data1.values[:,0]
 
 
 ###########Logistic Regression#####
@@ -41,7 +32,7 @@ cnf_matrix = metrics.confusion_matrix(y_pred , y_test )
 print(cnf_matrix)
 
 #####Metrics
-print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+print("logistic Regression_Accuracy:",metrics.accuracy_score(y_test, y_pred))
 print("Precision:",metrics.precision_score(y_test, y_pred))
 print("Recall:",metrics.recall_score(y_test, y_pred))
 
@@ -62,7 +53,7 @@ cnf_matrix = metrics.confusion_matrix(y_pred,y_test )
 print(cnf_matrix)
 
 #####Metrics
-print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+print("GaussianNB_Accuracy:",metrics.accuracy_score(y_test, y_pred))
 print("Precision:",metrics.precision_score(y_test, y_pred))
 print("Recall:",metrics.recall_score(y_test, y_pred))
 print("F_measure:",metrics.f1_score(y_test, y_pred))
@@ -81,7 +72,7 @@ cnf_matrix = metrics.confusion_matrix(y_test, y_pred)
 print(cnf_matrix)
 
 #####Metrics
-print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+print("QDA_Accuracy:",metrics.accuracy_score(y_test, y_pred))
 print("Precision:",metrics.precision_score(y_test , y_pred))
 print("Recall:",metrics.recall_score(y_test, y_pred))
 
@@ -100,7 +91,7 @@ cnf_matrix = metrics.confusion_matrix(y_pred ,y_test )
 print(cnf_matrix)
 
 #####Metrics
-print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+print("LDA_Accuracy:",metrics.accuracy_score(y_test, y_pred))
 print("Precision:",metrics.precision_score(y_test , y_pred))
 print("Recall:",metrics.recall_score(y_test, y_pred))
 
@@ -119,13 +110,14 @@ cnf_matrix = metrics.confusion_matrix(y_pred , y_test)
 print(cnf_matrix)
 
 #####Metrics
-print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
+print("Linear Regression_Accuracy:",metrics.accuracy_score(y_test, y_pred))
 print("Precision:",metrics.precision_score(y_test , y_pred))
 print("Recall:",metrics.recall_score(y_test, y_pred))
 
 
 from sklearn.model_selection import LeaveOneOut
-
+X = X_train
+y = y_train
 loo = LeaveOneOut()
 loo.get_n_splits(X)
 

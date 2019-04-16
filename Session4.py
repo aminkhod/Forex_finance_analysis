@@ -19,7 +19,9 @@ X_train=data2.values[:,1:]
 y_train=data2.values[:,0]
 X_test=data1.values[:,1:]
 y_test=data1.values[:,0]
-logreg = LogisticRegression( solver='lbfgs')
+
+
+logreg = LogisticRegression( )
 logregmodel = logreg.fit(X_train, y_train)
 
 y_pred = logregmodel.predict(X_test)

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="852746aa-985e-4318-b906-c0242bbe3da5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Session4.py" beforeDir="false" afterPath="$PROJECT_DIR$/Session4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session5.py" beforeDir="false" afterPath="$PROJECT_DIR$/Session5.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,34 +118,49 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
-          <entry key="py" value="9" />
+          <entry key="py" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="1" />
-          <entry key="Python" value="9" />
+          <entry key="Python" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="38" />
+          <entry key="py" value="87" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="38" />
+          <entry key="Python" value="87" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Session4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="374">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="e#74#93#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Session5.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+              <folding>
+                <element signature="e#44#63#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -201,6 +217,7 @@
         <option value="$PROJECT_DIR$/MLP.py" />
         <option value="$PROJECT_DIR$/Session1.py" />
         <option value="$PROJECT_DIR$/Session4.py" />
+        <option value="$PROJECT_DIR$/Session5.py" />
       </list>
     </option>
   </component>
@@ -243,7 +260,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Session4">
+  <component name="RunManager" selected="Python.Session5">
     <configuration name="Carb Alg2" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="shiezade_finance" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -307,6 +324,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Session5" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="shiezade_finance" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Session5.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="autoencoder" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="shiezade_finance" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -328,41 +366,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="crab Alg" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="shiezade_finance" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/crab Alg.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.crab Alg" />
       <item itemvalue="Python.Carb Alg2" />
       <item itemvalue="Python.autoencoder" />
       <item itemvalue="Python.MLP" />
       <item itemvalue="Python.Session4" />
+      <item itemvalue="Python.Session5" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Session5" />
         <item itemvalue="Python.Session4" />
         <item itemvalue="Python.MLP" />
         <item itemvalue="Python.autoencoder" />
         <item itemvalue="Python.Carb Alg2" />
-        <item itemvalue="Python.crab Alg" />
       </list>
     </recent_temporary>
   </component>
@@ -388,8 +405,8 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49925596" weight="0.4074074" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.49436393" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49925596" visible="true" weight="0.38969404" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.49436393" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -486,23 +503,28 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Session4.py</url>
-          <line>56</line>
+          <line>58</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Session4.py</url>
-          <line>69</line>
+          <line>71</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Session4.py</url>
-          <line>70</line>
+          <line>72</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Session4.py</url>
-          <line>64</line>
+          <line>66</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Session5.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -666,8 +688,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Session4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#74#93#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Session5.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="112" column="25" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="25" />
+          <folding>
+            <element signature="e#44#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
