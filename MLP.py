@@ -11,9 +11,9 @@ data2= pd.read_csv("EuroGBP_H1.csv")
 # bmedian = data2['Bare Nuclei'].median()
 # data2['Bare Nuclei'].fillna(bmedian,inplace=True)
 
-X=data2.values[:,3:15]
+X=data2.values[13579:13590,3:15]
 # print(X)
-y=data2.values[:,0]
+y=data2.values[13579:13590,0]
 print(y)
 # X_test=data1.values[:,1:]
 # y_test=data1.values[:,0]
