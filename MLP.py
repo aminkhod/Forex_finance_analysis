@@ -1,20 +1,20 @@
 ####################Multi-layer Perceptron###################
-
-
 import pandas as pd
 import numpy as np
 from sklearn.metrics import classification_report,confusion_matrix
 
 ###reading data
-missing_value=['?']
-data2= pd.read_csv("EURGBP_PERIOD_H1.csv", na_values=missing_value, encoding='Latin1')
+# missing_value=['?']
+data2= pd.read_csv("EuroGBP_H1.csv")
 # data1= pd.read_csv("EC-H1-test.csv", na_values=missing_value)
 ##replacing
 # bmedian = data2['Bare Nuclei'].median()
 # data2['Bare Nuclei'].fillna(bmedian,inplace=True)
 
 X=data2.values[:,3:15]
+# print(X)
 y=data2.values[:,0]
+print(y)
 # X_test=data1.values[:,1:]
 # y_test=data1.values[:,0]
 # y=np.array([1 if yinstance==4 else 0 for yinstance in y ])
