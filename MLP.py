@@ -7,38 +7,38 @@ from sklearn.metrics import classification_report,confusion_matrix
 
 ###reading data
 missing_value=['?']
-data2= pd.read_csv("EC-H1-train.csv", na_values=missing_value)
-data1= pd.read_csv("EC-H1-test.csv", na_values=missing_value)
+data2= pd.read_csv("EURGBP_PERIOD_H1.csv", na_values=missing_value, encoding='Latin1')
+# data1= pd.read_csv("EC-H1-test.csv", na_values=missing_value)
 ##replacing
 # bmedian = data2['Bare Nuclei'].median()
 # data2['Bare Nuclei'].fillna(bmedian,inplace=True)
 
-X_train=data2.values[:,1:]
-y_train=data2.values[:,0]
-X_test=data1.values[:,1:]
-y_test=data1.values[:,0]
+X=data2.values[:,3:15]
+y=data2.values[:,0]
+# X_test=data1.values[:,1:]
+# y_test=data1.values[:,0]
 # y=np.array([1 if yinstance==4 else 0 for yinstance in y ])
 
 
 
 ###### Devide data to test and train
-# from sklearn.model_selection import train_test_split
-# X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=0)
+from sklearn.model_selection import train_test_split
+X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=0)
 
 
 ############## Regression with MLP#############
 #######sklearn.neural_network.MLPRegressor
-# from sklearn.neural_network import MLPRegressor
-#
-# MLPRegressor(hidden_layer_sizes=(100, ),activation='relu',solver='adam',
-# 				alpha=0.0001, batch_size='auto',
-#               learning_rate='constant',learning_rate_init=0.001,
-#                 power_t=0.5, max_iter=200, shuffle=True,
-#               random_state=None, tol=0.0001, verbose=False,
-# 				warm_start=False,momentum=0.9,
-#               nesterovs_momentum=True, early_stopping=False,
-# 				validation_fraction=0.1, beta_1=0.9, beta_2=0.999,
-#               epsilon=1e-08,	n_iter_no_change=10)
+from sklearn.neural_network import MLPRegressor
+
+clf = MLPRegressor(hidden_layer_sizes=(100, ),activation='relu',solver='adam',
+				alpha=0.0001, batch_size='auto',
+              learning_rate='constant',learning_rate_init=0.001,
+                power_t=0.5, max_iter=200, shuffle=True,
+              random_state=None, tol=0.0001, verbose=False,
+				warm_start=False,momentum=0.9,
+              nesterovs_momentum=True, early_stopping=False,
+				validation_fraction=0.1, beta_1=0.9, beta_2=0.999,
+              epsilon=1e-08,	n_iter_no_change=10)
 
 
 '''
@@ -77,8 +77,8 @@ from sklearn.neural_network import MLPClassifier
 #               shuffle=True, solver='lbfgs', tol=0.0001,
 #               validation_fraction=0.1, verbose=False, warm_start=False)
 
-clf = MLPClassifier(solver='lbfgs', alpha=1e-5,
-                     hidden_layer_sizes=(100, 200), random_state=0)
+# clf = MLPClassifier(solver='lbfgs', alpha=1e-5,
+#                      hidden_layer_sizes=(100, 200), random_state=0)
 clf.fit(X_train, y_train)
 
 predict =clf.predict(X_test)
